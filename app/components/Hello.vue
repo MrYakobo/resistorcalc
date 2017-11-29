@@ -88,8 +88,8 @@
           if(str === '')
             str = 0
           var val = eval(str)
-          val*=this.chosen[3].mul
-          var tol = this.chosen[4].tol != null ? `&plusmn; ${this.chosen[4].tol}%` : ''
+          val*=this.chosen[this.amount].mul
+          var tol = this.chosen[this.amount+1].tol != null ? `&plusmn; ${this.chosen[this.amount+1].tol}%` : ''
           return `${this.prefix(val)}Ω ${tol}`
         }
       }
